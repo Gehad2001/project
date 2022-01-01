@@ -1,0 +1,147 @@
+/* Basics */
+:root{
+    --header-height: 5rem;
+    --big-font-size: 3rem;
+    --h1-font-size: 2.25rem;
+    --h2-font-size: 1.5rem;
+    --h3-font-size: 1.25rem;
+    --normal-font-size: 1rem;
+    --small-font-size: 0.813rem;
+}
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    text-transform: capitalize;
+    list-style: none;
+    outline: none;
+    border: none;
+}
+html{
+    scroll-behavior: smooth;
+}
+body{
+    background-color: var(--white-color);
+    font-size: var(--normal-font-size);
+    font-family: var(--font-body);
+    overflow-x: hidden;
+}
+
+/* Start About Section */
+/* .sections .sections-items{
+    min-height: 100vh;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+    padding: 7rem 3rem 0;
+}
+.sections .sections-items .image{
+    padding: 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid crimson;
+    text-align: center;
+    border-radius: 50px;
+}
+.sections .sections-items .image img{
+    width: 500px;
+    height: 600px;
+    object-fit: cover;
+} */
+
+/* Start Main Section */
+.sections{
+    padding: 3rem;
+    position: relative;
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    text-align: center;
+    direction: rtl;
+}
+.sections h1{
+    font-size: var(--big-font-size);
+    color: crimson;
+    margin-bottom: 1rem;
+}
+.sections-items{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 0.5rem;
+}
+.item-box{
+    padding: 10px;
+}
+.item-box h1{
+    font-size: var(--h2-font-size);
+    margin-top: 2rem;
+    color: crimson;
+    position: relative;
+}
+.item-box h1::after{
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    background-color: crimson;
+    bottom: -5px;
+    left: 0;
+}
+.item-box p{
+    font-size: var(--h3-font-size);
+    margin-bottom: 1.5rem;
+}
+.btn{
+    padding: 10px 30px;
+    font-size: var(--h2-font-size);
+    color: crimson;
+    background-color: #fff;
+    border: 1px solid crimson;
+    border-radius: 10px;
+    margin: 1rem;
+    display: block;
+    cursor: pointer;
+    transition: all 0.4s linear;
+}
+.btn:hover{
+    background-color: crimson;
+    color: #fff;
+}
+.sections .sections-items .image{
+    padding: 0.5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid crimson;
+    text-align: center;
+    border-radius: 50px;
+}
+.sections .sections-items .image img{
+    width: 200px;
+    height: 350px;
+    border-radius: 10px;
+    object-fit: cover;
+}
+/* Back Button */
+.back{
+    display: block;
+    text-align: center;
+}
+.back a{
+    font-size: var(--h2-font-size);
+    color: crimson;
+    padding: 2rem;
+}
+/* End Main Section */
+@media (max-width:960px) {
+    .sections-items{
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+@media (max-width:560px) {
+    .sections-items{
+        grid-template-columns: none;
+    }
+}
